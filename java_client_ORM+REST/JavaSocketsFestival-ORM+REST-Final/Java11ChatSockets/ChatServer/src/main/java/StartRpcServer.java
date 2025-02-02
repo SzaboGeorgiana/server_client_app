@@ -1,0 +1,62 @@
+import festival.network.utils.AbstractServer;
+import festival.network.utils.ChatRpcConcurrentServer;
+import festival.network.utils.ServerException;
+import festival.persistence.repository.*;
+
+import festival.server.Service;
+import festival.services.IChatServices;
+
+import java.io.IOException;
+import java.util.Properties;
+
+import org.hibernate.SessionFactory;
+
+public class StartRpcServer {
+    private static int defaultPort=55555;
+    public static void main(String[] args) {
+        // UserRepository userRepo=new UserRepositoryMock();
+        Properties serverProps=new Properties();
+        try {
+            serverProps.load(StartRpcServer.class.getResourceAsStream("/chatserver.properties"));
+            System.out.println("Server properties set. ");
+            serverProps.list(System.out);
+        } catch (IOException e) {
+            System.err.println("Cannot find chatserver.properties "+e);
+            return;
+        }
+
+        DBRepoArtist ArtistRepo=new DBRepoArtist(serverProps);
+        DBRepoSpectacol SpectacolRepo=new DBRepoSpectacol(serverProps);
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+
+        DBRepoBiletHibernate BiletRepo=new DBRepoBiletHibernate(serverProps,sessionFactory);
+        DBRepoAngajat AngajatRepo=new DBRepoAngajat(serverProps);
+        DBRepoClient ClientRepo=new DBRepoClient(serverProps);
+        DBRepoPersoana PersoanaRepo=new DBRepoPersoana(serverProps);
+
+
+
+        IChatServices srv=new Service(BiletRepo,ArtistRepo,SpectacolRepo,AngajatRepo,ClientRepo,PersoanaRepo);
+
+        int chatServerPort=defaultPort;
+        try {
+            chatServerPort = Integer.parseInt(serverProps.getProperty("chat.server.port"));
+        }catch (NumberFormatException nef){
+            System.err.println("Wrong  Port Number"+nef.getMessage());
+            System.err.println("Using default port "+defaultPort);
+        }
+        System.out.println("Starting server on port: "+chatServerPort);
+        AbstractServer server = new ChatRpcConcurrentServer(chatServerPort, srv);
+        try {
+            server.start();
+        } catch (ServerException e) {
+            System.err.println("Error starting the server" + e.getMessage());
+        }finally {
+            try {
+                server.stop();
+            }catch(ServerException e){
+                System.err.println("Error stopping server "+e.getMessage());
+            }
+        }
+    }
+}

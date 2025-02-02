@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Java11ChatSockets.ChatClient.main" target="19" />
+      <module name="Java11ChatSockets.ChatClient.test" target="19" />
+      <module name="Java11ChatSockets.RestServices.main" target="19" />
+      <module name="Java11ChatSockets.RestServices.test" target="19" />
+      <module name="RestServices1" target="17" />
+      <module name="RestServices1.main" target="17" />
+      <module name="RestServices1.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
