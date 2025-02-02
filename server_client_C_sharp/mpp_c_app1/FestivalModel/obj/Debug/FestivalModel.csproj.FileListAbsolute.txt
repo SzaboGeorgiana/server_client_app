@@ -1,0 +1,6 @@
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalModel\bin\Debug\FestivalModel.dll
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalModel\bin\Debug\FestivalModel.pdb
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalModel\obj\Debug\FestivalModel.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalModel\obj\Debug\FestivalModel.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalModel\obj\Debug\FestivalModel.dll
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalModel\obj\Debug\FestivalModel.pdb

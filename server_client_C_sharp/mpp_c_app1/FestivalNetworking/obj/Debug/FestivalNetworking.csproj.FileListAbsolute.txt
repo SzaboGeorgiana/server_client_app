@@ -1,0 +1,11 @@
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalNetworking\bin\Debug\FestivalNetworking.dll
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalNetworking\bin\Debug\FestivalNetworking.pdb
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalNetworking\bin\Debug\FestivalModel.dll
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalNetworking\bin\Debug\FestivalService.dll
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalNetworking\bin\Debug\FestivalModel.pdb
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalNetworking\bin\Debug\FestivalService.pdb
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalNetworking\obj\Debug\FestivalNetworking.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalNetworking\obj\Debug\FestivalNetworking.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalNetworking\obj\Debug\FestivalNetworking.csproj.CopyComplete
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalNetworking\obj\Debug\FestivalNetworking.dll
+C:\Users\andre\Documents\facultate\an2\MAP\mpp_c_app1\FestivalNetworking\obj\Debug\FestivalNetworking.pdb
