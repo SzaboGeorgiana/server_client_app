@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Java11ChatSockets" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Java11ChatSockets" />
+            <option value="$PROJECT_DIR$/Java11ChatSockets/ChatClient" />
+            <option value="$PROJECT_DIR$/Java11ChatSockets/ChatClientFX" />
+            <option value="$PROJECT_DIR$/Java11ChatSockets/ChatModel" />
+            <option value="$PROJECT_DIR$/Java11ChatSockets/ChatNetworking" />
+            <option value="$PROJECT_DIR$/Java11ChatSockets/ChatPersistence" />
+            <option value="$PROJECT_DIR$/Java11ChatSockets/ChatServer" />
+            <option value="$PROJECT_DIR$/Java11ChatSockets/ChatServices" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/__MACOSX/Java11ChatSockets/ChatClientFX" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/__MACOSX/Java11ChatSockets/ChatClientFX" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
