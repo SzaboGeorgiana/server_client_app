@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="festival.client.gui.AngajatView"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Button fx:id="b1" onAction="#f3" layoutX="156.0" layoutY="328.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="238.0" text="CUMPARA BILETE LA ACEST SPECTACOL">
+            <font>
+                <Font name="Bauhaus 93" size="12.0" />
+            </font>
+        </Button>
+        <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="298.0" prefWidth="522.0">
+            <columns>
+                <TableColumn fx:id="tableColumn1" prefWidth="92.5" text="Nume" />
+                <TableColumn fx:id="tableColumn2" prefWidth="143.0" text="Data" />
+                <TableColumn fx:id="tableColumn3" prefWidth="81.0" text="Locatie" />
+                <TableColumn fx:id="tableColumn4" prefWidth="111.0" text="Locuri disponibile" />
+                <TableColumn fx:id="tableColumn5" prefWidth="93.5" text="Bilete vandute" />
+            </columns>
+        </TableView>
+        <DatePicker fx:id="calendar" layoutX="594.0" layoutY="319.0" onAction="#f2" prefHeight="60.0" prefWidth="174.0" />
+        <Button layoutX="694.0" layoutY="697.0" mnemonicParsing="false" onAction="#loggoutButton" prefHeight="42.0" prefWidth="108.0" text="LOGOUT">
+            <font>
+                <Font name="Bauhaus 93" size="19.0" />
+            </font>
+        </Button>
+        <TextField fx:id="textf1" layoutX="642.0" layoutY="106.0" prefHeight="25.0" prefWidth="108.0">
+            <font>
+                <Font name="Bauhaus 93" size="13.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="textf2" layoutX="642.0" layoutY="152.0" prefHeight="25.0" prefWidth="108.0">
+            <font>
+                <Font name="Bauhaus 93" size="13.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="textf3" layoutX="642.0" layoutY="195.0" prefHeight="25.0" prefWidth="108.0">
+            <font>
+                <Font name="Bauhaus 93" size="13.0" />
+            </font>
+        </TextField>
+        <Label layoutX="558.0" layoutY="112.0" text="NUME:">
+            <font>
+                <Font name="Bauhaus 93" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="558.0" layoutY="158.0" text="PRENUME:">
+            <font>
+                <Font name="Bauhaus 93" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="558.0" layoutY="201.0" text="CATE LOCURI?">
+            <font>
+                <Font name="Bauhaus 93" size="13.0" />
+            </font>
+        </Label>
+        <Button fx:id="b2" onAction="#f4" layoutX="168.0" layoutY="697.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="238.0" text="CUMPARA BILETE LA ACEST SPECTACOL">
+            <font>
+                <Font name="Bauhaus 93" size="12.0" />
+            </font>
+        </Button>
+        <TableView fx:id="tableView2" layoutX="26.0" layoutY="383.0" prefHeight="298.0" prefWidth="522.0">
+            <columns>
+                <TableColumn fx:id="tableColumn6" prefWidth="92.5" text="Nume" />
+                <TableColumn fx:id="tableColumn7" prefWidth="143.0" text="Locatia" />
+                <TableColumn fx:id="tableColumn8" prefWidth="131.0" text="Ora" />
+                <TableColumn fx:id="tableColumn9" prefWidth="154.5" text="Locuri disponibile" />
+                <TableColumn fx:id="tableColumn10" minWidth="0.0" prefWidth="0.0" text="Bilete vandute" />
+            </columns>
+        </TableView>
+        <TextField fx:id="textf4" layoutX="653.0" layoutY="475.0" prefHeight="25.0" prefWidth="108.0">
+            <font>
+                <Font name="Bauhaus 93" size="13.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="textf5" layoutX="653.0" layoutY="521.0" prefHeight="25.0" prefWidth="108.0">
+            <font>
+                <Font name="Bauhaus 93" size="13.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="textf6" layoutX="653.0" layoutY="564.0" prefHeight="25.0" prefWidth="108.0">
+            <font>
+                <Font name="Bauhaus 93" size="13.0" />
+            </font>
+        </TextField>
+        <Label layoutX="569.0" layoutY="481.0" text="NUME:">
+            <font>
+                <Font name="Bauhaus 93" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="569.0" layoutY="527.0" text="PRENUME:">
+            <font>
+                <Font name="Bauhaus 93" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="569.0" layoutY="570.0" text="CATE LOCURI?">
+            <font>
+                <Font name="Bauhaus 93" size="13.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

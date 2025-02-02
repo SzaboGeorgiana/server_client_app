@@ -1,0 +1,143 @@
+//syntax="proto3";
+//package chat.protocol;
+//
+//option java_package = "festival.network.protoBuffProtocol";
+//option java_outer_classname = "ChatProtobufs";
+//
+//message User{
+//     string id=1;
+//     string passwd=2;
+//}
+//
+//message Message{
+//     string receiverId=1;
+//     string senderId=2;
+//     string text=3;
+//}
+//message ChatRequest {
+//  enum Type {Unkown=0; Login = 1; Logout = 2; SendMessage = 3; GetLoggedFriends=4 ;}
+//
+//  // Identifies which request is filled in.
+//   Type type = 1;
+//
+//  // One of the following will be filled in, depending on the type.
+//   oneof payload{
+//       User user = 2;
+//       Message message = 3;
+//  }
+//}
+//
+//message ChatResponse{
+//   enum Type { Unknown=0; Ok = 1; Error = 2; GetLoggedFriends=3; FriendLoggedIn = 4; FriendLoggedOut=5; NewMessage=6;  }
+//
+//     // Identifies which request is filled in.
+//      Type type = 1;
+//
+//     // One of the following will be filled in, depending on the type.
+//      string error = 2;
+//      repeated User friends=3;
+//      User user=4 ;
+//      Message message = 5;
+//
+//}
+syntax="proto3";
+package proto;
+
+option java_package = "festival.network.protoBuffProtocol";
+option java_outer_classname = "FestivalProtobufs";
+
+
+message Angajat {
+  string nume = 1;
+  string prenume = 2;
+  string username = 3;
+  string password = 4;
+  string oficiu = 5;
+  string id=6;
+  // alte câmpuri specifice angajatului
+}
+
+message Bilet {
+  int64 id_bilet = 1;
+  int64 id_angajat = 2;
+  int64 id_client = 3;
+  int64 id_spectacol = 4;
+  int32 nr_locuri = 5;
+  // alte câmpuri specifice biletului
+}
+
+message Spectecol {
+  int64 id_spectacol = 1;
+  int64 id_artist = 2;
+  string locatie = 3;
+  string data_inc = 4;
+  int32 nr_locuri = 5;
+  // alte câmpuri specifice spectacolului
+}
+
+
+message ListaString {
+  repeated string lista = 1;
+  // alte câmpuri specifice, dacă este necesar
+}
+
+message Mystring {
+  string un_singur_elem = 1;
+  // alte câmpuri specifice, dacă este necesar
+}
+
+message ChatException {
+  string message = 1;
+  // alte câmpuri specifice excepției
+}
+
+// Define RequestType enum specific serviciului de bilete
+//enum RequestType {
+//
+//}
+
+// Define ResponseType enum specific serviciului de bilete
+//enum ResponseType {
+//
+//  // alte tipuri de răspunsuri specifice serviciului de bilete
+//}
+
+
+message FestRequest {
+  enum Type { FIND_ARTISTI_SPECTACOLE_BILETE = 0;
+    FIND_ARTISTI_SPECTACOLE_BILETE_DUPA_DATA = 1;
+    FIND_ARTISTI_SPECTACOLE_BILETE_INDEX = 2;
+    FIND_ARTISTI_SPECTACOLE_BILETE_DUPA_DATA_INDEX = 3;
+    //  SAVE_PERSOANA_RETURN_ID_PERS = 4;
+    //  SAVE_CLIENT_RETURN_ID_CLIENT = 5;
+    SAVE_BILET = 4;
+    VALID = 5;
+    LOGOUT = 6;}
+
+  // Identifies which request is filled in.
+  Type type = 1;
+
+  // One of the following will be filled in, depending on the type.
+  oneof payload{
+    Angajat user = 2;
+    string message = 3;
+  }
+}
+
+message FestResponse{
+  enum Type {   OK = 0;
+    ERROR = 1;
+    BILET_SAVED = 2;  }
+
+  // Identifies which request is filled in.
+  Type type = 1;
+
+  // One of the following will be filled in, depending on the type.
+  string error = 2;
+  repeated string lista = 3;
+  Angajat user=4 ;
+  Spectecol spectacol=5;
+  Bilet bilet=6;
+  string un_singur_elem = 7;
+
+}
